@@ -1,12 +1,19 @@
 function Book({data}){
-   
+   let thisBook = data.title;
+  
+   function removeSpaces(str) {
+    return str.replace(/[^\w\s]|_/g, '').replace(/\s+/g, '').toLowerCase();
+  }
+
+  thisBook = removeSpaces(thisBook);
+
     return (
         
-        <div className="card">
+        <div className="card" > 
+            <a id={`${thisBook}`}></a>
             <h5 className="card-header">{data.title}</h5>
             <div className="card-body">
-            <h5>{data.subtitle}</h5>
-
+                 <h5>{data.subtitle}</h5>
                 <table className="table">
                   <tbody>
                     <tr>
@@ -35,4 +42,4 @@ function Book({data}){
             </div>
         </div>
 
-)}
+)};

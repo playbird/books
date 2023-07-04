@@ -15,7 +15,7 @@ function App(){
 
     return (<>
         <div className="container">
-            <h1>React Components</h1>    
+            <h1>JavaScript Books</h1>    
             {loaded && data.books.map((book,i) => <Book data={book} key={i}/>)}
         </div>        
     </>);   
